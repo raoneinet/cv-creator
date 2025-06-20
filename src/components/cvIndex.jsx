@@ -27,7 +27,7 @@ export const Personal = () => {
     };
 
     return (
-        <div className="py-4 md:max-w-3xl rounded-md">
+        <div className="py-4 md:max-w-3xl mx-auto rounded-md">
             <div className="py-3 px-2 bg-white rounded-md max-h-[750px] overflow-y-scroll side-scroll">
                 {/*.side-scroll is a personal className to style the scrollbar*/}
                 <form>

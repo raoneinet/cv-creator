@@ -4,7 +4,7 @@ import {CvContextProvider} from "./contexts/context"
 
 export default function App(){
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <Header/>
       <CvContextProvider>
         <CvCreactor/>
