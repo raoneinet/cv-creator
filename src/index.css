@@ -1,11 +1,2 @@
 /*IMPORT TAILWIND*/
 @import "tailwindcss";
-
-
-.side-scroll::-webkit-scrollbar{
-    width: 4px;
-}
-
-.side-scroll::-webkit-scrollbar-thumb{
-    background-color: #969696;
-}

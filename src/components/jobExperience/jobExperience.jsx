@@ -3,7 +3,7 @@
 export const JobExperience = (props) => {
     return (
         <div className="flex flex-col gap-5 mb-5">
-            <p>Experiência Profissional</p>
+            <h2 className="font-bold text-gray-800">Experiência Profissional</h2>
             <div className="flex md:flex-row flex-col justify-between">
                 <label>
                     <p className="text-sm text-gray-700">Empresa</p>

@@ -2,7 +2,8 @@
 
 export const CvHeader = (props) => {
     return (
-        <div>
+        <div className="flex flex-col gap-5 mb-5">
+            <h2 className="font-bold text-gray-800">Informações pessoais</h2>
             <div className="flex md:flex-row flex-col justify-between mb-5">
                 <label>
                     <p>Adicione uma foto</p>
