@@ -1,14 +1,17 @@
-import {Header} from "./components/ui/header"
+import { Header } from "./components/ui/header"
 import { CvCreactor } from "./components/ui/cvcreator"
-import {CvContextProvider} from "./contexts/context"
+import { CvContextProvider } from "./contexts/context"
+import { BrowserRouter } from "react-router-dom"
 
-export default function App(){
+export default function App() {
   return (
-    <div className="">
-      <Header/>
-      <CvContextProvider>
-        <CvCreactor/>
-      </CvContextProvider>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <CvContextProvider>
+          <CvCreactor />
+        </CvContextProvider>
+      </BrowserRouter>
+    </>
   )
 }
