@@ -4,7 +4,7 @@ export const CvHeader = (props) => {
     return (
         <div className="flex flex-col gap-5 mb-5">
             <h2 className="font-bold text-gray-800">Informações pessoais</h2>
-            <div className="flex md:flex-row flex-col justify-between mb-5">
+            <div className="flex md:flex-row flex-col justify-between">
                 <label>
                     <p>Adicione uma foto</p>
                     <input type="file" id="cvPicture" name="cv-picture" accept="image/*"
