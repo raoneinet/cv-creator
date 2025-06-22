@@ -1,9 +1,18 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { CvContext } from "../../contexts/context"
 import { Education } from "./education"
+import { BlockInputs } from "./blockEdu"
 
 export const CvEducation = () => {
+
+    const [isDisabled, setIsDisabled] = useState(false);
+
     const cvCtx = useContext(CvContext)
+
+    const handleDisableBtn = (e) => {
+        e.preventDefault()
+        setIsDisabled(!isDisabled)
+    }
 
     return (
         <>
@@ -20,6 +29,12 @@ export const CvEducation = () => {
                 setEduStartDate={cvCtx?.handleform}
                 eduFinishDate={cvCtx?.formData.eduFinishDate}
                 setEduFinishDate={cvCtx?.handleform}
+                isDisabled={isDisabled}
+            />
+
+            <BlockInputs
+                handleDisableBtn={handleDisableBtn}
+                isDisabled={isDisabled}
             />
         </>
     )

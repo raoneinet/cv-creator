@@ -4,7 +4,7 @@ import { CvHeader } from "./header"
 import { CvContact } from "./contact"
 import { CvAddress } from "./address"
 import { CvAboutYou } from "./aboutYou"
-import {BlockInputs} from "./blockInputs"
+import {BlockHeader} from "./blockHeader"
 
 
 export const InfoHeader = () => {
@@ -63,7 +63,7 @@ export const InfoHeader = () => {
                 onAboutChange={cvCtx?.handleform}
                 isDisabled={isDisabled}
             />
-            <BlockInputs
+            <BlockHeader
                 handleDisableBtn={handleDisableBtn}
                 isDisabled={isDisabled}/>
         </>
