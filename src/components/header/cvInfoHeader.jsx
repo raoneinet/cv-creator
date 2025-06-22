@@ -1,12 +1,15 @@
 import { CvContext } from "../../contexts/context"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { CvHeader } from "./header"
 import { CvContact } from "./contact"
 import { CvAddress } from "./address"
 import { CvAboutYou } from "./aboutYou"
+import {BlockInputs} from "./blockInputs"
 
 
 export const InfoHeader = () => {
+
+    const [isDisabled, setIsDisabled] = useState(false);
 
     const cvCtx = useContext(CvContext)
 
@@ -20,7 +23,12 @@ export const InfoHeader = () => {
             };
             picReader.readAsDataURL(file); // converte a imagem
         }
-    };
+    }
+
+    const handleDisableBtn = (e)=>{
+        e.preventDefault()
+        setIsDisabled(!isDisabled)
+    }
 
     return (
         <>
@@ -30,6 +38,7 @@ export const InfoHeader = () => {
                 onNameChange={cvCtx?.handleform}
                 onNationValue={cvCtx?.formData.nationality}
                 onNationChange={cvCtx?.handleform}
+                isDisabled={isDisabled}
             />
             <CvContact
                 emailValue={cvCtx?.formData.email}
@@ -40,17 +49,23 @@ export const InfoHeader = () => {
                 onLinkedinChange={cvCtx?.handleform}
                 portfolioValue={cvCtx?.formData.portfolio}
                 onPortfoliochange={cvCtx?.handleform}
+                isDisabled={isDisabled}
             />
             <CvAddress
                 addressValue={cvCtx?.formData.address}
                 onAddressChange={cvCtx?.handleform}
                 cityValue={cvCtx?.formData.city}
                 onCityChange={cvCtx?.handleform}
+                isDisabled={isDisabled}
             />
             <CvAboutYou
                 aboutValue={cvCtx?.formData.aboutYou}
                 onAboutChange={cvCtx?.handleform}
+                isDisabled={isDisabled}
             />
+            <BlockInputs
+                handleDisableBtn={handleDisableBtn}
+                isDisabled={isDisabled}/>
         </>
     )
 }

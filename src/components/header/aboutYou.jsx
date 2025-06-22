@@ -7,10 +7,11 @@ export const CvAboutYou = (props) => {
             <label>
                 <p>Resumo sobre você</p>
                 <textarea name="aboutYou"
-                    className="w-full border border-gray-300 rounded-md outline-0" 
+                    className={`w-full border border-gray-300 rounded-md outline-0 ${!props.isDisabled ? "bg-white":"bg-gray-200"}`}
                     rows="5" cols="74"
                     value={props.aboutValue}
-                    onChange={props.onAboutChange}></textarea>
+                    onChange={props.onAboutChange}
+                    disabled={props.isDisabled}></textarea>
             </label>
         </div>
     )
