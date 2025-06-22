@@ -6,7 +6,7 @@ import { Footer } from "./components/ui/footer"
 
 export default function App() {
   return (
-    <div className="w-full text-white overflow-x-hidden">
+    <div className="w-full overflow-x-hidden">
       <BrowserRouter>
         <Header />
         <CvContextProvider>
