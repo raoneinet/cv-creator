@@ -1,9 +1,9 @@
 import { CvContext } from "../../contexts/context"
 import { useContext } from "react"
-import { CvHeader } from "./cvHeader"
-import { CvContact } from "./cvContact"
-import { CvAddress } from "./cvAddress"
-import { CvAboutYou } from "./cvAboutYou"
+import { CvHeader } from "./header"
+import { CvContact } from "./contact"
+import { CvAddress } from "./address"
+import { CvAboutYou } from "./aboutYou"
 
 
 export const InfoHeader = () => {
