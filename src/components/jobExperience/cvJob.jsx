@@ -11,11 +11,6 @@ export const CvJob = () => {
 
     const cvCtx = useContext(CvContext)
 
-    useEffect(() => {
-        const locked = localStorage.getItem("jobLocked") === "true"
-        setIsDisabled(locked)
-    }, [])
-
     const handleDisableBtn = (e) => {
         e.preventDefault()
 
@@ -35,6 +30,17 @@ export const CvJob = () => {
         localStorage.setItem("jobLocked", "false");
         setIsDisabled(false)
     }
+
+    useEffect(() => {
+        const locked = localStorage.getItem("jobLocked") === "true"
+        setIsDisabled(locked)
+
+        //Desbloqueia input ao carregar página
+        window.addEventListener("load", ()=>{
+            localStorage.setItem("jobLocked", "false")
+            setIsDisabled(false)
+        })
+    }, [])
 
 
     return (

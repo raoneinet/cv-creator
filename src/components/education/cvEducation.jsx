@@ -11,11 +11,6 @@ export const CvEducation = () => {
 
     const cvCtx = useContext(CvContext)
 
-    useEffect(() => {
-        const locked = localStorage.getItem("eduLocked") === "true";
-        setIsDisabled(locked);
-    }, []);
-
     const handleDisableBtn = (e) => {
         e.preventDefault()
 
@@ -32,9 +27,20 @@ export const CvEducation = () => {
         e.preventDefault()
 
         // Salvar os dados no localStorage como string
-        localStorage.setItem("eduLocked", "false");
-        setIsDisabled(false);
+        localStorage.setItem("eduLocked", "false")
+        setIsDisabled(false)
     }
+
+    useEffect(() => {
+        const locked = localStorage.getItem("eduLocked") === "true"
+        setIsDisabled(locked)
+
+        //Desbloqueia input ao carregar página
+        window.addEventListener("load", () => {
+            localStorage.setItem("eduLocked", "false")
+            setIsDisabled(false)
+        })
+    }, [])
 
     return (
         <>
