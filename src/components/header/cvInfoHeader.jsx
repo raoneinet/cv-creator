@@ -28,7 +28,7 @@ export const InfoHeader = () => {
     }
 
     useEffect(() => {
-        const locked = localStorage.getItem("formLocked") === "true"
+        const locked = localStorage.getItem("headerLocked") === "true"
         setIsDisabled(locked)
     }, [])
 
@@ -36,10 +36,10 @@ export const InfoHeader = () => {
         e.preventDefault()
 
         // Salvar os dados no localStorage como string
-        localStorage.setItem("myInput", JSON.stringify(cvCtx?.formData))
+        localStorage.setItem("headerInput", JSON.stringify(cvCtx?.formData))
 
         // Marcar formulário como bloqueado
-        localStorage.setItem("formLocked", "true")
+        localStorage.setItem("headerLocked", "true")
         setSendLocalStorage("Dados salvos.")
         setIsDisabled(true)
     }
@@ -48,7 +48,7 @@ export const InfoHeader = () => {
         e.preventDefault()
 
         // Salvar os dados no localStorage como string
-        localStorage.setItem("formLocked", "false");
+        localStorage.setItem("headerLocked", "false");
         setIsDisabled(false)
     }
 

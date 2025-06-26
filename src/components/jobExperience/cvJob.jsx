@@ -11,31 +11,31 @@ export const CvJob = () => {
 
     const cvCtx = useContext(CvContext)
 
-     useEffect(() => {
-            const locked = localStorage.getItem("formLocked") === "true"
-            setIsDisabled(locked)
-        }, [])
-    
-        const handleDisableBtn = (e) => {
-            e.preventDefault()
-    
-            // Salvar os dados no localStorage como string
-            localStorage.setItem("myInput", JSON.stringify(cvCtx?.formData))
-    
-            // Marcar formulário como bloqueado
-            localStorage.setItem("formLocked", "true")
-            setSendLocalStorage("Dados salvos.")
-            setIsDisabled(true)
-        }
-    
-        const unBlockInputs = (e) => {
-            e.preventDefault()
-    
-            // Salvar os dados no localStorage como string
-            localStorage.setItem("formLocked", "false");
-            setIsDisabled(false)
-        }
-    
+    useEffect(() => {
+        const locked = localStorage.getItem("jobLocked") === "true"
+        setIsDisabled(locked)
+    }, [])
+
+    const handleDisableBtn = (e) => {
+        e.preventDefault()
+
+        // Salvar os dados no localStorage como string
+        localStorage.setItem("jobInput", JSON.stringify(cvCtx?.formData))
+
+        // Marcar formulário como bloqueado
+        localStorage.setItem("jobLocked", "true")
+        setSendLocalStorage("Dados salvos.")
+        setIsDisabled(true)
+    }
+
+    const unBlockInputs = (e) => {
+        e.preventDefault()
+
+        // Salvar os dados no localStorage como string
+        localStorage.setItem("jobLocked", "false");
+        setIsDisabled(false)
+    }
+
 
     return (
         <>
@@ -56,7 +56,7 @@ export const CvJob = () => {
             />
 
             <BlockJob
-                 handleDisableBtn={handleDisableBtn}
+                handleDisableBtn={handleDisableBtn}
                 unBlockInputs={unBlockInputs}
                 isDisabled={isDisabled}
             />

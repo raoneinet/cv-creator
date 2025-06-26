@@ -12,7 +12,7 @@ export const CvEducation = () => {
     const cvCtx = useContext(CvContext)
 
     useEffect(() => {
-        const locked = localStorage.getItem("formLocked") === "true";
+        const locked = localStorage.getItem("eduLocked") === "true";
         setIsDisabled(locked);
     }, []);
 
@@ -20,10 +20,10 @@ export const CvEducation = () => {
         e.preventDefault()
 
         // Salvar os dados no localStorage como string
-        localStorage.setItem("myInput", JSON.stringify(cvCtx?.formData))
+        localStorage.setItem("eduInputs", JSON.stringify(cvCtx?.formData))
 
         // Marcar formulário como bloqueado
-        localStorage.setItem("formLocked", "true")
+        localStorage.setItem("eduLocked", "true")
         setSendLocalStorage("Dados salvos.")
         setIsDisabled(true)
     }
@@ -32,7 +32,7 @@ export const CvEducation = () => {
         e.preventDefault()
 
         // Salvar os dados no localStorage como string
-        localStorage.setItem("formLocked", "false");
+        localStorage.setItem("eduLocked", "false");
         setIsDisabled(false);
     }
 
