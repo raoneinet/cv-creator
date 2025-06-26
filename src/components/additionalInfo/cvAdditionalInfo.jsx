@@ -1,4 +1,4 @@
-import { AdditionalInfo } from "./additionalInfo"
+import { AdditionalInfo } from "./AdditionalInfo"
 import { BlockAdditionalInfo } from "./blockAdditionalInfo"
 import { useContext, useState, useEffect } from "react"
 import { CvContext } from "../../contexts/context"

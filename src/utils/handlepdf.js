@@ -92,7 +92,7 @@ export const generatePdf = (e, cvCtx) => {
     doc.line(10, 133, 200, 133) //make a line below the 'about you' title
     doc.text(cvCtx?.formData.jobCompany, 30, 138)
     doc.text(cvCtx?.formData.jobRole, 30, 143)
-    doc.text(doc.splitTextToSize(cvCtx?.jobDesc, 180), 10, 154)
+    doc.text(doc.splitTextToSize(cvCtx?.formData.jobDesc, 180), 10, 154)
     doc.text(cvCtx?.formData.jobCity, 30, 170)
     doc.text(cvCtx?.formData.jobStartDate, 111, 170)
     doc.text(cvCtx?.formData.jobFinishDate, 168, 170)
