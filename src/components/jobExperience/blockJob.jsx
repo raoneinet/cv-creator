@@ -1,6 +1,6 @@
 
 
-export const BlockInputs = (props) => {
+export const BlockJob = (props) => {
     return (
         <div className="w-full flex justify-end">
             <button

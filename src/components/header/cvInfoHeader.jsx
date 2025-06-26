@@ -1,15 +1,17 @@
 import { CvContext } from "../../contexts/context"
-import { useContext, useState } from "react"
+import { useContext, useState, useEffect } from "react"
 import { CvHeader } from "./header"
 import { CvContact } from "./contact"
 import { CvAddress } from "./address"
 import { CvAboutYou } from "./aboutYou"
-import {BlockHeader} from "./blockHeader"
+import { BlockHeader } from "./blockHeader"
 
 
 export const InfoHeader = () => {
 
-    const [isDisabled, setIsDisabled] = useState(false);
+    const [sendLocalStorage, setSendLocalStorage] = useState("")
+
+    const [isDisabled, setIsDisabled] = useState(false)
 
     const cvCtx = useContext(CvContext)
 
@@ -17,17 +19,37 @@ export const InfoHeader = () => {
         e.preventDefault()
         const file = e.target.files[0];
         if (file) {
-            const picReader = new FileReader();
+            const picReader = new FileReader()
             picReader.onload = (event) => {
                 cvCtx?.setCvPicture(event.target.result); // base64 da imagem
-            };
+            }
             picReader.readAsDataURL(file); // converte a imagem
         }
     }
 
-    const handleDisableBtn = (e)=>{
+    useEffect(() => {
+        const locked = localStorage.getItem("formLocked") === "true"
+        setIsDisabled(locked)
+    }, [])
+
+    const handleDisableBtn = (e) => {
         e.preventDefault()
-        setIsDisabled(!isDisabled)
+
+        // Salvar os dados no localStorage como string
+        localStorage.setItem("myInput", JSON.stringify(cvCtx?.formData))
+
+        // Marcar formulário como bloqueado
+        localStorage.setItem("formLocked", "true")
+        setSendLocalStorage("Dados salvos.")
+        setIsDisabled(true)
+    }
+
+    const unBlockInputs = (e) => {
+        e.preventDefault()
+
+        // Salvar os dados no localStorage como string
+        localStorage.setItem("formLocked", "false");
+        setIsDisabled(false)
     }
 
     return (
@@ -65,7 +87,9 @@ export const InfoHeader = () => {
             />
             <BlockHeader
                 handleDisableBtn={handleDisableBtn}
-                isDisabled={isDisabled}/>
+                unBlockInputs={unBlockInputs}
+                isDisabled={isDisabled}
+            />
         </>
     )
 }
