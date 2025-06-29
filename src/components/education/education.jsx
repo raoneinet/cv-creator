@@ -4,7 +4,7 @@ export const Education = (props) => {
     return (
         <div className="flex flex-col gap-5 mb-5">
             <h2 className="font-bold text-gray-800">Educação</h2>
-            <div className="flex md:flex-row flex-col justify-between">
+            <div className="flex md:flex-row flex-col justify-between gap-2">
                 <label>
                     <p className="text-sm text-gray-700">Curso</p>
                     <input
