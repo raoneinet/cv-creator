@@ -11,9 +11,16 @@ export const CvSkills = () => {
 
     const cvCtx = useContext(CvContext)
 
+    const newSkills = cvCtx?.formData.skills.split(",")
+
     useEffect(() => {
         const locked = localStorage.getItem("skillsLocked") === "true"
         setIsDisabled(locked)
+
+        window.addEventListener("load", () => {
+            localStorage.setItem("skillsInput", "false")
+            setIsDisabled(false)
+        })
     }, [])
 
     const handleDisableBtn = (e) => {
@@ -26,6 +33,8 @@ export const CvSkills = () => {
         localStorage.setItem("skillsLocked", "true")
         setSendLocalStorage("Dados salvos.")
         setIsDisabled(true)
+
+        console.log(newSkills)
     }
 
     const unBlockInputs = (e) => {
@@ -39,6 +48,8 @@ export const CvSkills = () => {
     return (
         <>
             <Skills
+                skills={cvCtx?.formData.skills}
+                setSkills={cvCtx?.handleform}
                 isDisabled={isDisabled}
             />
             <BlockSkills

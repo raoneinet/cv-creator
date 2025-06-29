@@ -14,6 +14,11 @@ export const CvAdditionalInfo = () => {
     useEffect(() => {
         const locked = localStorage.getItem("extaInfoLocked") === "true"
         setIsDisabled(locked)
+
+        window.addEventListener("load", ()=>{
+            localStorage.setItem("skillsInput", "false")
+            setIsDisabled(false)
+        })
     }, [])
 
     const handleDisableBtn = (e) => {
@@ -39,6 +44,8 @@ export const CvAdditionalInfo = () => {
     return (
         <>
             <AdditionalInfo
+                additionalInfo={cvCtx?.formData.additionalInfo}
+                setAdditionalInfo={cvCtx?.handleform}
                 isDisabled={isDisabled} 
             />
             <BlockAdditionalInfo

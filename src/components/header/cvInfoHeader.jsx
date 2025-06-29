@@ -27,6 +27,18 @@ export const InfoHeader = () => {
         }
     }
 
+    useEffect(() => {
+        const locked = localStorage.getItem("headerLocked") === "true"
+        setIsDisabled(locked)
+
+        //Desbloqueia input ao carregar página
+        window.addEventListener("load", () => {
+            localStorage.setItem("headerLocked", "false")
+            setIsDisabled(false)
+        })
+    }, [])
+
+
     const handleDisableBtn = (e) => {
         e.preventDefault()
 
@@ -46,17 +58,6 @@ export const InfoHeader = () => {
         localStorage.setItem("headerLocked", "false");
         setIsDisabled(false)
     }
-
-    useEffect(() => {
-        const locked = localStorage.getItem("headerLocked") === "true"
-        setIsDisabled(locked)
-
-        //Desbloqueia input ao carregar página
-        window.addEventListener("load", () => {
-            localStorage.setItem("headerLocked", "false")
-            setIsDisabled(false)
-        })
-    }, [])
 
     return (
         <>

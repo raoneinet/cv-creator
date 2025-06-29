@@ -12,7 +12,9 @@ export const AdditionalInfo = (props) => {
                     className={`w-full border border-gray-300 rounded-md outline-0 ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
                     rows="5" cols="74"
                     placeholder="Inglês; Intercâmbio no exterior; Voluntariado; Carta de condução AB;"
-                    disabled={props.isDisabled}></textarea>
+                    disabled={props.isDisabled}
+                    value={props.additionalInfo}
+                    onChange={props.setAdditionalInfo}></textarea>
             </label>
         </div>
     )

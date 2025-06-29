@@ -27,6 +27,8 @@ export const CvContextProvider = ({ children }) => {
         jobCity: "",
         jobStartDate: "",
         jobFinishDate: "",
+        skills: "",
+        additionalInfo: ""
     })
 
 
