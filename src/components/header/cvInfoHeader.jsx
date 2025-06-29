@@ -33,7 +33,7 @@ export const InfoHeader = () => {
 
         //Desbloqueia input ao carregar página
         window.addEventListener("load", () => {
-            localStorage.setItem("headerLocked", "false")
+            
             setIsDisabled(false)
         })
     }, [])

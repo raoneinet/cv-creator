@@ -16,7 +16,7 @@ export const CvAdditionalInfo = () => {
         setIsDisabled(locked)
 
         window.addEventListener("load", ()=>{
-            localStorage.setItem("skillsInput", "false")
+            localStorage.setItem("extaInfoLocked", "false")
             setIsDisabled(false)
         })
     }, [])
