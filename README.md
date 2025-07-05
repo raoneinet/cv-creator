@@ -24,6 +24,7 @@ O **CV Generator** permite que você crie facilmente um currículo, adicionando 
 - ✅ Formulário dinâmico para preenchimento das seções do currículo
 - ✅ Exportação do currículo em formato PDF
 - ✅ Navegação por diferentes etapas usando rotas
+- ✅ Bloqueio de campos inputs para prevenir modificação
 
 ---
 
