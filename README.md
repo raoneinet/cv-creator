@@ -1,12 +1,58 @@
-# React + Vite
+# 💼 CV-creator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto pessoal para criação e geração de currículos (Curriculum Vitae), desenvolvido em **React** com **Vite**, utilizando **react-router-dom** para navegação e **jsPDF** para exportar o CV em PDF.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Sobre o projeto
 
-## Expanding the ESLint configuration
+O **CV Generator** permite que você crie facilmente um currículo, adicionando suas informações pessoais, experiências, formações e habilidades. Ao final, é possível exportar o currículo em PDF de forma prática e rápida.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- [React](https://react.dev/) — Biblioteca para criação de interfaces de usuário
+- [Vite](https://vitejs.dev/) — Build tool rápido e moderno para projetos front-end
+- [react-router-dom](https://reactrouter.com/) — Gerenciamento de rotas e navegação
+- [jsPDF](https://github.com/parallax/jsPDF) — Geração de arquivos PDF no cliente
+
+---
+
+## ✨ Funcionalidades
+
+- ✅ Formulário dinâmico para preenchimento das seções do currículo
+- ✅ Exportação do currículo em formato PDF
+- ✅ Navegação por diferentes etapas usando rotas
+
+---
+
+## 💻 Pré-requisitos
+
+- Node.js >= 14.x
+- npm ou yarn
+
+---
+
+## ⚙️ Instalação
+
+```bash
+# Clone este repositório
+git clone https://github.com/seu-usuario/cv-generator.git
+
+# Acesse a pasta do projeto
+cd cv-generator
+
+# Instale as dependências
+npm install
+# ou
+yarn
+```
+
+# Inicie o servidor de desenvolvimento
+
+npm run dev
+# ou
+yarn dev
+
+Feito com 💙 por Raone Ferreira.
