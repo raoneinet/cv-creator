@@ -12,7 +12,7 @@ export const generatePdf = (e, cvCtx) => {
 
 
     //Header titles
-    doc.setFont("Arial", "bold"); //font-weight and font-family for the following info
+    doc.setFont("Helvetica", "bold"); //font-weight and font-family for the following info
     doc.setTextColor(darkGray) //color dark gray
     doc.text("Email: ", 60, 18) //email title
     doc.text("Telefone: ", 60, 26) //phone title
@@ -21,13 +21,13 @@ export const generatePdf = (e, cvCtx) => {
     doc.text("Endereço: ", 60, 50) //linkedIn title
 
     //header info
-    doc.setFont("Arial", "bold"); //font-weight and font-family for the following info
+    doc.setFont("Helvetica", "bold"); //font-weight and font-family for the following info
     doc.setFontSize(15) //font-size
     doc.setTextColor(secTitle) //text color for 'about you' text
     doc.text(cvCtx?.formData.fullName, 60, 10) //fullname and nationality
 
     doc.setFontSize(12) //font-size
-    doc.setFont("Arial", "normal"); //font-weight and font-family for the following info
+    doc.setFont("Helvetica", "normal"); //font-weight and font-family for the following info
     doc.setTextColor(lightGray) //text color for 'about you' text
     doc.text(cvCtx?.formData.nationality, 150, 10)
     doc.text(cvCtx?.formData.email, 80, 18) //email
@@ -37,7 +37,7 @@ export const generatePdf = (e, cvCtx) => {
     doc.text(`${cvCtx?.formData.address}, ${cvCtx?.city}`, 80, 50) //address
     doc.addImage(cvCtx?.cvPicture, 10, 5, 40, 50) //picture
 
-    doc.setFont("Arial", "bold"); //font-weight and font-family for the following info
+    doc.setFont("Helvetica", "bold"); //font-weight and font-family for the following info
     doc.setTextColor(secTitle) //color dark gray
     doc.text("Resumo sobre você", 10, 65) //about you title
 
@@ -45,11 +45,11 @@ export const generatePdf = (e, cvCtx) => {
     doc.setDrawColor(lightGray) //color light gray
     doc.line(10, 68, 200, 68) //make a line below the 'about you' title
     doc.setTextColor(lightGray) //text color for 'about you' text
-    doc.setFont("Arial", "normal");//font-weight and font-family for the following info
+    doc.setFont("Helvetica", "normal");//font-weight and font-family for the following info
     doc.text(doc.splitTextToSize(cvCtx?.formData.aboutYou, 180), 10, 75)//about you text
 
     //Education titles
-    doc.setFont("Arial", "bold"); //font-weight and font-family for the following info
+    doc.setFont("Helvetica", "bold"); //font-weight and font-family for the following info
     doc.setTextColor(secTitle) //color dark gray
     doc.text("Educação", 10, 100) //about you title
 
@@ -62,7 +62,7 @@ export const generatePdf = (e, cvCtx) => {
     doc.text("Data de conclusão: ", 135, 120)
 
     //Education info
-    doc.setFont("Arial", "normal"); //font-weight and font-family for the following info    
+    doc.setFont("Helvetica", "normal"); //font-weight and font-family for the following info    
     doc.setTextColor(lightGray) //color light gray
     doc.line(10, 103, 200, 103) //make a line below the 'about you' title
     doc.text(cvCtx?.formData.eduCourse, 25, 110)
@@ -74,7 +74,7 @@ export const generatePdf = (e, cvCtx) => {
 
 
     //Job Experience titles
-    doc.setFont("Arial", "bold"); //font-weight and font-family for the following info
+    doc.setFont("Helvetica", "bold"); //font-weight and font-family for the following info
     doc.setTextColor(secTitle) //color dark gray
     doc.text("Experiencia Profissional", 10, 130) //about you title
 
@@ -99,7 +99,7 @@ export const generatePdf = (e, cvCtx) => {
 
 
     //Skills info
-    doc.setFont("Arial", "bold"); //font-weight and font-family for the following info
+    doc.setFont("Helvetica", "bold"); //font-weight and font-family for the following info
     doc.setTextColor(secTitle) //color dark gray
     doc.text("Habilidades", 10, 190)
 
@@ -109,7 +109,7 @@ export const generatePdf = (e, cvCtx) => {
     doc.text(cvCtx?.formData.skills.split(",").join(" | ").toUpperCase(), 10, 200)
 
     //Additional info
-    doc.setFont("Arial", "bold"); //font-weight and font-family for the following info
+    doc.setFont("Helvetica", "bold"); //font-weight and font-family for the following info
     doc.setTextColor(secTitle) //color dark gray
     doc.text("Informação Adicional", 10, 215)
 

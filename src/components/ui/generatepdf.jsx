@@ -8,9 +8,7 @@ export const GeneratePDF = () => {
 
     return (
         <>
-            <SaveButton
-                handleGenBtn={(e) => generatePdf(e, cvCtx)}
-            />
+            <SaveButton handleGenBtn={(e) => generatePdf(e, cvCtx)}/>
         </>
     )
 }
