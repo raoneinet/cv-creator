@@ -7,7 +7,7 @@ export const generatePdf = async (cvCtx) => {
   const element = cvCtx?.printRef?.current
 
   // Cria o canvas a partir do elemento
-  const canvas = await html2canvas(element)
+  const canvas = await html2canvas(element, {scale: 2})
   const imgData = canvas.toDataURL("image/png")
 
   // Cria o PDF com tamanho baseado no canvas

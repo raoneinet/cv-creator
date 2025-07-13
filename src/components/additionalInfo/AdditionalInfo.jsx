@@ -8,7 +8,8 @@ export const AdditionalInfo = (props) => {
                 <span className="text-xs">(itens separados por ponto-vírgula ;)</span>
             </h2>
             <label>
-                <textarea name="additionalInfo"
+                <textarea 
+                    name="additionalInfo"
                     className={`px-2 w-full border border-gray-300 rounded-md outline-0 ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
                     rows="5" cols="74"
                     placeholder="Inglês; Intercâmbio no exterior; Voluntariado; Carta de condução AB;"

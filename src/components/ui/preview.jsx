@@ -6,22 +6,23 @@ export const Preview = () => {
     const cvCtx = useContext(CvContext)
 
     return (
-        <div ref={cvCtx?.printRef} className="w-4/5 h-full lg:h-[calc(100%-50px)] bg-white flex">
-            <div className="w-55 bg-[#ef9766] h-full px-3 py-5">
+        <div ref={cvCtx?.printRef} className=" bg-white flex a4-size">
+            <div className="w-50 bg-[#ef9766] h-full px-3 py-5">
                 <div className="flex pb-5">
-                    <img src={cvCtx?.cvPicture} className="w-40 rounded-full" />
+                    <img src={cvCtx?.cvPicture} className="w-35" />
                 </div>
                 <div className="w-full">
                     <div>
                         <div className="text-sm flex flex-col gap-2">
-                            <p><span className="font-bold text-[#364153]">Nacionalidade</span>: <span className="text-[#4a5565]">{cvCtx?.formData.nationality}</span></p>
-                            <p><span className="font-bold text-[#364153]">Telefone</span>: <span className="text-[#4a5565]">{cvCtx?.formData.phone}</span></p>
-                            <p><span className="font-bold text-[#364153]">Email</span>: <span className="text-[#4a5565]">{cvCtx?.formData.email}</span></p>
+                            <p>{/*<span className="font-bold text-[#364153]">Nacionalidade</span>:*/}<span className="text-[#4a5565]">{cvCtx?.formData.nationality}</span></p>
+                            <p>{/*<span className="font-bold text-[#364153]">Telefone</span>: */}<span className="text-[#4a5565]">{cvCtx?.formData.phone}</span></p>
+                            <p>{/*<span className="font-bold text-[#364153]">Email</span>: */}<span className="text-[#4a5565]">{cvCtx?.formData.email}</span></p>
                             {cvCtx?.formData.linkedIn &&
                                 <p><span className="font-bold text-[#364153]">LinkedIn</span>: <span className="text-[#4a5565]">{cvCtx?.formData.linkedIn}</span></p>}
                             {cvCtx?.formData.portfolio &&
                                 <p><span className="font-bold text-[#364153]">Portfólio</span>: <span className="text-[#4a5565]">{cvCtx?.formData.portfolio}</span></p>}
-                            <p><span className="font-bold text-[#364153]">Endereço: </span><span className="text-[#4a5565]">{cvCtx?.formData.address + ", " + cvCtx?.formData.city}</span></p>
+                            {cvCtx?.formData.address && 
+                                <p><span className="font-bold text-[#364153]">Endereço: </span> <span className="text-[#4a5565]">{cvCtx?.formData.address + ", " + cvCtx?.formData.city}</span></p>}
                         </div>
                     </div>
                 </div>
