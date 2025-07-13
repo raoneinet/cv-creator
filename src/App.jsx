@@ -6,11 +6,11 @@ import { Footer } from "./components/ui/footer"
 export default function App() {
   return (
     <div className="w-full overflow-x-hidden">
-      <Header />
       <CvContextProvider>
+        <Header />
         <CvCreactor />
+        <Footer />
       </CvContextProvider>
-      <Footer />
     </div>
   )
 }
