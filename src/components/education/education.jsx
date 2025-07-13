@@ -10,6 +10,7 @@ export const Education = (props) => {
                     <input
                         type="text" id="eduCourse" name="eduCourse"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 md:w-90 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="Engenharia"
                         value={props.eduCourse}
                         onChange={props.setEduCourse}
                         disabled={props.isDisabled}/>
@@ -19,6 +20,7 @@ export const Education = (props) => {
                     <input
                         type="text" id="eduInstution" name="eduInstution"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 md:w-90 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="Universidade, Centro de ensino..."
                         value={props.eduInstution}
                         onChange={props.setEduInstution}
                         disabled={props.isDisabled}/>
@@ -30,6 +32,7 @@ export const Education = (props) => {
                     <input
                         type="text" id="eduCity" name="eduCity"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="São Paulo"
                         value={props.eduCity}
                         onChange={props.setEduCity}
                         disabled={props.isDisabled}/>
@@ -39,6 +42,7 @@ export const Education = (props) => {
                     <input
                         type="text" id="eduWebSite" name="eduWebSite"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="www.education.com"
                         value={props.eduWebSite}
                         onChange={props.setEduWebSite}
                         disabled={props.isDisabled}/>
