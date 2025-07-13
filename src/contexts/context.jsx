@@ -1,9 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useRef } from "react";
 
 export const CvContext = createContext()
 
 export const CvContextProvider = ({ children }) => {
-
+    
+    const printRef = useRef(null)
     const [cvPicture, setCvPicture] = useState(null)
     const [formData, setFormData] = useState({
         fullName: "",
@@ -46,7 +47,8 @@ export const CvContextProvider = ({ children }) => {
                cvPicture,
                setCvPicture,
                formData,
-               handleform
+               handleform,
+               printRef
             }}
         >
             {children}

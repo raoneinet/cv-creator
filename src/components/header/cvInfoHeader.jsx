@@ -20,6 +20,7 @@ export const InfoHeader = () => {
         const file = e.target.files[0];
         if (file) {
             const picReader = new FileReader()
+            
             picReader.onload = (event) => {
                 cvCtx?.setCvPicture(event.target.result); // base64 da imagem
             }

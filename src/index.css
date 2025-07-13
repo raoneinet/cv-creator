@@ -1,2 +1,12 @@
 /*IMPORT TAILWIND*/
 @import "tailwindcss";
+
+
+.scroll-custom::-webkit-scrollbar{
+    width: 4px;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
