@@ -6,7 +6,7 @@ export const Preview = () => {
     const cvCtx = useContext(CvContext)
 
     return (
-        <div ref={cvCtx?.printRef} className="w-4/5 h-[calc(100%-50px)] bg-white flex">
+        <div ref={cvCtx?.printRef} className="w-4/5 h-full lg:h-[calc(100%-50px)] bg-white flex">
             <div className="w-55 bg-[#ef9766] h-full px-3 py-5">
                 <div className="flex pb-5">
                     <img src={cvCtx?.cvPicture} className="w-40 rounded-full" />

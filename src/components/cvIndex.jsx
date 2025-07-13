@@ -9,7 +9,7 @@ export const CvForm = () => {
 
 
     return (
-        <div className="md:max-w-full h-9/9 overflow-auto px-5 scroll-custom">
+        <div className="w-full h-9/9 overflow-auto px-5 scroll-custom">
             <div className="py-5 bg-white">
                 <form>
                     {/*PERSONAL INFO*/}     
