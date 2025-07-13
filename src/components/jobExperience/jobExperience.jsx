@@ -10,6 +10,7 @@ export const JobExperience = (props) => {
                     <input
                         type="text" id="jobcompany" name="jobCompany"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 md:w-90 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="Microsoft"
                         value={props.jobCompany}
                         onChange={props.setJobCompany}
                         disabled={props.isDisabled} />
@@ -19,6 +20,7 @@ export const JobExperience = (props) => {
                     <input
                         type="text" id="jobrole" name="jobRole"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 md:w-90 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="Analista"
                         value={props.jobRole}
                         onChange={props.setJobRole}
                         disabled={props.isDisabled} />
@@ -29,8 +31,9 @@ export const JobExperience = (props) => {
                     <p>Atividades desempenhadas</p>
                     <textarea
                         name="jobDesc"
-                        className={`w-full border border-gray-300 rounded-md outline-0 ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`} 
+                        className={`px-2 w-full border border-gray-300 rounded-md outline-0 ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`} 
                         rows="5" cols="74"
+                        placeholder="Pincipais atividades desempenhadas na função"
                         value={props.jobDesc}
                         onChange={props.setJobDesc}
                         disabled={props.isDisabled}>
@@ -43,6 +46,7 @@ export const JobExperience = (props) => {
                     <input
                         type="text" id="jobcity" name="jobCity"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="São Paulo"
                         value={props.jobCity}
                         onChange={props.setJobCity}
                         disabled={props.isDisabled} />

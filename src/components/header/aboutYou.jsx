@@ -7,8 +7,9 @@ export const CvAboutYou = (props) => {
             <label>
                 <p>Resumo sobre você</p>
                 <textarea name="aboutYou"
-                    className={`w-full border border-gray-300 rounded-md outline-0 ${!props.isDisabled ? "bg-white":"bg-gray-200"}`}
+                    className={`px-2 w-full border border-gray-300 rounded-md outline-0 ${!props.isDisabled ? "bg-white":"bg-gray-200"}`}
                     rows="5" cols="74"
+                    placeholder="Resumo sobre você e sua vida profissional"
                     value={props.aboutValue}
                     onChange={props.onAboutChange}
                     disabled={props.isDisabled}></textarea>

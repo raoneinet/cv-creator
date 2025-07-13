@@ -23,6 +23,7 @@ export const CvHeader = (props) => {
                     <input
                         type="text" id="fullname" name="fullName"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 md:w-90 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="Nome completo"
                         value={props.nameValue}
                         onChange={props.onNameChange}
                         disabled={props.isDisabled}/>
@@ -32,6 +33,7 @@ export const CvHeader = (props) => {
                     <input
                         type="text" id="nationality" name="nationality"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 md:w-90 w-full ${!props.isDisabled ? "bg-white":"bg-gray-200"}`}
+                        placeholder="Brasileiro"
                         value={props.onNationValue}
                         onChange={props.onNationChange}
                         disabled={props.isDisabled}/>

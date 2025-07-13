@@ -11,6 +11,7 @@ export const CvContact = (props) => {
                     <input
                         type="email" id="email" name="email"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 md:w-90 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="exemplo@email.com"
                         value={props.emailValue}
                         onChange={props.onEmailChange}
                         disabled={props.isDisabled} />
@@ -20,6 +21,7 @@ export const CvContact = (props) => {
                     <input
                         type="number" id="phone" name="phone"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 md:w-90 w-full ${!props.isDisabled ? "bg-white" : "bg-gray-200"}`}
+                        placeholder="Apenas números"
                         value={props.phoneValue}
                         onChange={props.onPhoneChange}
                         disabled={props.isDisabled} />
@@ -31,7 +33,7 @@ export const CvContact = (props) => {
                     <input
                         type="text" id="linkedin" name="linkedIn"
                         className={`py-2 px-1 border border-gray-300 rounded-md outline-0 md:w-90 w-full ${!props.isDisabled ? "bg-white" : " bg-gray-200"}`}
-                        placeholder="https://linkedin.com/"
+                        placeholder="www.linkedin.com/exemplo"
                         value={props.linkedInValue}
                         onChange={props.onLinkedinChange}
                         disabled={props.isDisabled} />
