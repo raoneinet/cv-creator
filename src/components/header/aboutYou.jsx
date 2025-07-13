@@ -3,7 +3,7 @@
 export const CvAboutYou = (props) => {
       
     return (
-        <div className="flex md:flex-row flex-col justify-between mb-5">
+        <div className="flex mb-5">
             <label>
                 <p>Resumo sobre você</p>
                 <textarea name="aboutYou"
