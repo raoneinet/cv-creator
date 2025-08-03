@@ -1,6 +1,6 @@
 # 💼 CV-creator
 
-Um projeto pessoal para criação e geração de currículos (Curriculum Vitae), desenvolvido em **React** com **Vite**, utilizando **react-router-dom** para navegação e **jsPDF** para exportar o CV em PDF.
+Projeto pessoal para criação e geração de currículos (Curriculum Vitae), desenvolvido em **React** com **Vite**, utilizando **react-router-dom** para navegação e **jsPDF** para exportar o CV em PDF.
 
 ---
 
