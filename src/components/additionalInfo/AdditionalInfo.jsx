@@ -3,10 +3,6 @@
 export const AdditionalInfo = (props) => {
     return (
         <div className="flex flex-col gap-5 mb-5">
-            <h2>
-                <span className="font-bold text-gray-800">Informação Adicional</span>
-                <span className="text-xs">(itens separados por ponto-vírgula ;)</span>
-            </h2>
             <label>
                 <textarea 
                     name="additionalInfo"
